@@ -50,8 +50,9 @@ that the latest packages are found there.
 ;; Add the melpa package repository
 ;; Remember to always use HTTPS
 ;;
+(require 'package) ;; You might already have this line
 (add-to-list 'package-archives
-             '("melpa", "https://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/"))
 ```
 
 # Initialize the packages
@@ -113,12 +114,13 @@ This is largely a matter of preference. I like the zenburn theme, to
 install it like this:
 
 
-<kbd>M-x package-install zenburn</kbd>
-
+<kbd>M-x package-install [RET] zenburn-theme [RET]</kbd>
 
 Then enable it in the init file:
 
 ```elisp
+;; Load the zeburn theme
+;;
 (load-theme 'zenburn t)
 ```
 
