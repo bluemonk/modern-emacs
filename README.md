@@ -47,8 +47,11 @@ repository. Most developers use the Melpa archives, so chances are
 that the latest packages are found there.
 
 ```elisp
+;; Add the melpa package repository
+;; Remember to always use HTTPS
+;;
 (add-to-list 'package-archives
-             '("melpa", "http://melpa.org/packages/") t)
+             '("melpa", "https://melpa.org/packages/") t)
 ```
 
 # Initialize the packages
@@ -62,40 +65,56 @@ Workarounds exists, but to make thing easy just write this on the very
 top of your init file (to make sure it's loaded first):
 
 ```elist
+;; Initialize packages
+;;
 (package-initialize)
 ```
 
 # Remove ugly defaults
 
 Emacs desktop version comes pre-configured with some defaults that
-many deem quite ulgy. Let's get rid of them:
+many deem quite ulgy. If you don't like them, you can get rid of
+them with the following configuration:
 
-## Remove splash screen
+### Remove the splash screen ###
 
 ```elisp
+;; Remove the splash screen
+;; 
 (setq inhibit-splash-screen t)
 ```
 
-## Remove menu bar
+### Remove the menu bar ###
 
+```elisp
+;; Remove the menu bar
+;;
 (customize-set-variable 'menu-bar-mode nil)
+```
+### Remove the tool bar ###
 
-### Remove tool bar
-
+```elisp
+;; Remove the tool bar
+;;
 (customize-set-variable 'tool-bar-mode nil)
+```
 
-## Remove scroll bar
+### Remove scroll bar ###
 
+```elisp
+;; Remove the scroll bar
+;;
 (customize-set-variable 'scroll-bar-mode nil)
+```
 
 # Use a better theme
 
 This is largely a matter of preference. I like the zenburn theme, to
 install it like this:
 
-```
-M-x package-install zenburn
-```
+
+<kbd>M-x package-install zenburn</kbd>
+
 
 Then enable it in the init file:
 
