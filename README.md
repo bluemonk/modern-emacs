@@ -140,4 +140,33 @@ font. Install it and then enable it:
 You can adjust the font size by changing the number after the font
 name.
 
+# Hurt yourserf with guru mode
+
+Bozhidar Batsov is one of the best emacs hackers out there. He's the author
+of guru-mode, which aims to teach you the emacs-way by disabling navigation
+keys like the arrow keys, page up and page down, and forcing you to use
+C-n, C-p, C-f, C-b and so on. Annoying at first, it will quickly get under
+your skin so that it will feels so wrong to move your hands from the keyboard
+again. Highly recommended.
+
+Install it
+
+<kbd>M-x package-install [RET] guru-mode [RET]</kbd>
+
+and enable it on programming modes using the following configuration
+
+```elisp
+;; Guru mode - hooked to prog modes
+(add-hook 'prog-mode-hook 'guru-mode)
+(add-hook 'html-mode-hook 'guru-mode)
+```
+
+Alternatively, you can just enable it globally:
+
+```elisp
+(guru-global-mode +1)
+```
+
+
+
 
