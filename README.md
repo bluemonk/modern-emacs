@@ -110,9 +110,9 @@ them with the following configuration:
 
 # Use a better theme
 
-This is largely a matter of preference. I like the zenburn theme, to
-install it like this:
-
+This is largely a matter of preference. Browse
+[this gallery]{https://emacsthemes.com/} and choose one that you like.
+I like the zenburn theme; you can install it with the following command:
 
 <kbd>M-x package-install [RET] zenburn-theme [RET]</kbd>
 
@@ -126,10 +126,13 @@ Then enable it in the init file:
 
 # Better font
 
-Also a matter of preference. I'm in love with the beautiful Menlo
+Also a matter of preference. You can checkout [this great repository]{https://github.com/hbin/top-programming-fonts}
+for some excellent programming fonts.
+I'm in love with the beautiful Menlo
 font. Install it and then enable it:
 
 ```elisp
+;; Use Menlo as default font
 (set-default-font "Menlo 10")
 ```
 
